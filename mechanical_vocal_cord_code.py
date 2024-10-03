@@ -5,7 +5,11 @@ from scipy.io import wavfile
 from scipy import signal
 from pydub import AudioSegment
 
-f1 = 
+f1 = "C:\Users\eglin\egl49\test_recording_vocal_cord.wav"
+s, a = wavfile.read(f1)
+print (f'sampling rate: {s}')
+print (f'audio shape: {np.shape(a)}')
+
 #analyze entire audio clip
 na = len(a)
 a_k = np.fft.fft(a)[0:int(na/2)]/na # FFT function from numpy
